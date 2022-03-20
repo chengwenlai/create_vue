@@ -1,0 +1,52 @@
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+//弹性布局相关
+.flex {
+  display: flex;
+}
+.flex-center-x{
+  display: flex;
+  justify-content: center;
+}
+.flex-center-y{
+  display: flex;
+  align-items: center;
+}
+.flex-center {
+  @extend .flex-center-x;
+  align-items: center;
+}
+.flex-xs {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-center-xs {
+  @extend .flex-xs;
+  align-items: center;
+}
+
+//光标样式
+.cursorPointer{
+  cursor:pointer;
+}
+// 字体不换行,超出省略号
+@mixin fontNoWrap($n) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+}
+.fontNoWrap1 {
+  @include fontNoWrap(1);
+}
+.fontNoWrap2 {
+  @include fontNoWrap(2);
+}
+.fontNoWrap3 {
+  @include fontNoWrap(3);
+}
